@@ -9,5 +9,4 @@ public class DYmallApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DYmallApplication.class, args);
 	}
-//u
 }
