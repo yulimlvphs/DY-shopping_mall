@@ -7,6 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Author seodong-geun
  * @since 2023/04/10
  */
-public interface ProductRepository extends JpaRepository {
-
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }

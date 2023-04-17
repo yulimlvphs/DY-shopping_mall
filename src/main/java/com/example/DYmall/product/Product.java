@@ -25,31 +25,31 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = AUTO) // 자동으로 생성되는 값
-    private Long id;
+    private Long id; // 상품 테이블 기본키(id)
 
     @Column(nullable = false)
-    private String name;
+    private String name; // 상품명
 
     @Column(nullable = false)
-    private String description;
+    private String description; // 상품설명
 
     @Column(nullable = false)
-    private int price;
+    private int price; // 상품가격
 
     @Column(nullable = false)
-    private int stock;
+    private int stock; // 재고
 
     @Column(nullable = false)
-    private String category;
+    private String category; // 상품 카테고리
 
     @Column(nullable = false)
-    private String manufacturer;
+    private String brand; // 상품 브랜드
 
     @Column(nullable = false, updatable = false)
-    private Date created;
+    private Date created; // 생성일자
 
     @Column(nullable = false)
-    private Date updated;
+    private Date updated; // 수정일자
 
     // Constructors, getters, and setters
 }
