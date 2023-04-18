@@ -13,6 +13,7 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
 
+    // 생성자 의존성 주입
     public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
