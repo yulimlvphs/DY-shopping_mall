@@ -3,6 +3,7 @@ package com.example.DYmall.product.controller;
 import com.example.DYmall.product.domain.Product;
 import com.example.DYmall.product.dto.CreateProductRequest;
 import com.example.DYmall.product.dto.ProductResponse;
+import com.example.DYmall.product.dto.UpdateProductRequest;
 import com.example.DYmall.product.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
