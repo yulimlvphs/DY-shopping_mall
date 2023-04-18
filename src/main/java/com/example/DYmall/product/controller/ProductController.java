@@ -1,5 +1,9 @@
-package com.example.DYmall.product;
+package com.example.DYmall.product.controller;
 
+import com.example.DYmall.product.domain.Product;
+import com.example.DYmall.product.dto.CreateProductRequest;
+import com.example.DYmall.product.dto.ProductResponse;
+import com.example.DYmall.product.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
@@ -13,6 +17,7 @@ import java.net.URI;
 
 @RestController // REST API를 처리하는 컨트롤러를 의미
 @RequestMapping("/products") // API의 기본 URL을 '/products'로 지정
+// 상품 관리를 위한 컨트롤러 클래스
 public class ProductController {
 
     // Product 서비스를 의존성 주입(Dependency Injection) 받음

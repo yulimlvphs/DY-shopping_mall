@@ -1,5 +1,6 @@
-package com.example.DYmall.product;
+package com.example.DYmall.product.repository;
 
+import com.example.DYmall.product.domain.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

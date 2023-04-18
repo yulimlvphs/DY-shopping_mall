@@ -1,4 +1,6 @@
-package com.example.DYmall.product;
+package com.example.DYmall.product.service;
+
+import com.example.DYmall.product.domain.Product;
 
 /**
  * @version 1.0

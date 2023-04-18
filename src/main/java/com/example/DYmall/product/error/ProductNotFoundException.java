@@ -1,4 +1,4 @@
-package com.example.DYmall.product;
+package com.example.DYmall.product.error;
 
 /**
  * @version 1.0
