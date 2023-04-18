@@ -1,4 +1,4 @@
-package com.example.DYmall.product;
+package com.example.DYmall.product.domain;
 
 
 import lombok.AllArgsConstructor;
@@ -51,5 +51,5 @@ public class Product {
     @Column(nullable = false)
     private Date updated; // 수정일자
 
-    // Constructors, getters, and setters
+    // 생성자, getters, setters
 }
