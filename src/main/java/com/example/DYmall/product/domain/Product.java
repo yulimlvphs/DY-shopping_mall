@@ -1,9 +1,7 @@
 package com.example.DYmall.product.domain;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
 import javax.persistence.*;
@@ -17,20 +15,22 @@ import static javax.persistence.GenerationType.AUTO;
  * @since 2023/04/10
  */
 @Entity // JPA 엔티티 클래스임을 나타냄
-@Data // Getter/Setter, equals, hashCode, toString 등을 자동으로 생성
+@Getter
+@Builder
 @NoArgsConstructor // 파라미터가 없는 기본 생성자를 자동으로 생성
 @AllArgsConstructor // 모든 필드를 인자로 받는 생성자를 자동으로 생성
+@ToString
 @Table(name = "product")
-public class Product {
+public class Product extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = AUTO) // 자동으로 생성되는 값
     private Long id; // 상품 테이블 기본키(id)
 
-    @Column(nullable = false)
+    @Column(length = 200, nullable = false)
     private String name; // 상품명
 
-    @Column(nullable = false)
+    @Column(length = 1500,nullable = false)
     private String description; // 상품설명
 
     @Column(nullable = false)
@@ -44,12 +44,6 @@ public class Product {
 
     @Column(nullable = false)
     private String brand; // 상품 브랜드
-
-    @Column(nullable = false, updatable = false)
-    private Date created; // 생성일자
-
-    @Column(nullable = false)
-    private Date updated; // 수정일자
 
     // 생성자, getters, setters
 }
