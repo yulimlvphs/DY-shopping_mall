@@ -1,13 +1,7 @@
 package com.example.DYmall.product.domain;
 
-
 import lombok.*;
-
-
 import javax.persistence.*;
-import java.util.Date;
-
-import static javax.persistence.GenerationType.AUTO;
 
 /**
  * @version 1.0
@@ -24,7 +18,7 @@ import static javax.persistence.GenerationType.AUTO;
 public class Product extends BaseEntity{
 
     @Id
-    @GeneratedValue(strategy = AUTO) // 자동으로 생성되는 값
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 기본키 자동 생성
     private Long id; // 상품 테이블 기본키(id)
 
     @Column(length = 200, nullable = false)
