@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>회원가입 페이지</title>
 </head>
 <body>
-<!--수정하기-->
-<!-- 풀리퀘스트 연습 -->
-<form
+<p th:if="${complete}" th:text="${complete}" style="color:blue"></p>
+
+<form th:action="@{/join/insert}" th:object="${MemberForm}">
+    <input th:if="${num_id}" type="hidden" th:field="*{num_id}" >
+    아이디 : <input type="text" th:field="*{member_id}"/> <br>
+    비밀번호 : <input type="text" th:field="*{member_pw}"/> <br>
+    이름 : <input type="text" th:field="*{memberName}"/> b<br>
+    휴대폰 번호 : <input type="text" th:field="*{member_phone}"/> <br>
+    이메일 : <input type="text" th:field="*{member_email}"/>
+    <input type="submit" value="회원가입">
+</form>
 </body>
 </html>
