@@ -5,6 +5,14 @@
     <title>index.html</title>
 </head>
 <body>
-<a href=join.html>로그인하기</a>
+<p th:if="${username}" th:text="'Welcome, ' + ${username} + '님'" style="color:blue"></p>
+<form th:action="@{/join}">
+    <input type="submit" value="회원가입"> </br>
+</form>
+
+<form th:action="@{/join/in}">
+    <input type="submit" value="로그인"> </br>
+</form>
+
 </body>
 </html>
